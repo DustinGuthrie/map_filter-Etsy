@@ -24,12 +24,13 @@ $(document).ready(function() {
 var specificPrice = " ";
 var allItems = items.forEach(function(currVal, idx, arr){
   if(currVal.price >= 14 && currVal.price <= 18){
-    specificPrice += (currVal.listing_id + " ,");
+    specificPrice += (currVal.title + "<br>");
   }else {
     return;
   }
 });
-$('#answer2').replaceWith(specificPrice);
+$('#answer2').html(specificPrice);
+// $('#answer2').replaceWith(specificPrice);
 
 //Question 3:
 // var namePrice = "";
@@ -63,7 +64,7 @@ var woodArray = items.filter(function(currItem){
 });
 var withWood = "";
   woodArray.forEach(function(curVal, idx, arr){
-    withWood += (curVal.listing_id + " ,");
+    withWood += (curVal.listing_id + "<br>");
 });
 // var newArr = _.contians(currVal, "materials")
 //   return curVal.
@@ -77,7 +78,8 @@ var withWood = "";
 //     return;
 //   }
 // });
-$('#answer4').replaceWith(withWood);
+$('#answer4').html(withWood);
+// $('#answer4').replaceWith(withWood);
 
 //Question 5:
 var eightMaterials = "";
